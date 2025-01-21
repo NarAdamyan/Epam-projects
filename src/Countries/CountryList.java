@@ -21,7 +21,7 @@ public class CountryList {
         counties.add(america);
         counties.add(armenia);
 //        System.out.println(counties);
-        UniqueCountriesOneList(counties);
+        UniqueCountriesViaOneList(counties);
     }
 
     public static void UniqueCountries(LinkedList<Country> countries) {

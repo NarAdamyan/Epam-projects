@@ -29,6 +29,4 @@ public class Country {
                 ", flag='" + flagUrl + '\'' +
                 '}'+"\n";
     }
-
-
 }
