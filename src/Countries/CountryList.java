@@ -56,9 +56,7 @@ public class CountryList {
     public static void UniqueCountriesViaOneList(LinkedList<Country> countries) {
         for (int i = 0; i < countries.size(); i++) {
             for (int j = i + 1; j < countries.size(); j++) {
-                if ((countries.get(i).name.equals(countries.get(j)) ||
-                        (countries.get(i).flagUrl.equals(countries.get(j).flagUrl)) ||
-                        (countries.get(i).emblemUrl.equals(countries.get(j).emblemUrl)))) {
+                if (countries.get(i).equals(countries.get(j))) {
                     countries.remove(j);
                     j--;
 
