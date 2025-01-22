@@ -21,12 +21,12 @@ public class Country {
     public String toString() {
         return "Country{" +
                 "name='" + name + '\'' +
-                ", language='" + language + '\'' +
-                ", religion='" + religion + '\'' +
-                ", population=" + population +
-                ", area=" + area + " km²" +
-                ", emblem='" + emblemUrl + '\'' +
-                ", flag='" + flagUrl + '\'' +
+//                ", language='" + language + '\'' +
+//                ", religion='" + religion + '\'' +
+//                ", population=" + population +
+//                ", area=" + area + " km²" +
+//                ", emblem='" + emblemUrl + '\'' +
+//                ", flag='" + flagUrl + '\'' +
                 '}'+"\n";
     }
 }
