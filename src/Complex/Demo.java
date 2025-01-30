@@ -20,10 +20,12 @@ public class Demo {
 //        map.put(home6.getAddress(), home6);
 
         try {
-            returnByAddress(map, home3);
+            returnByAddress(map, home6);
         } catch (NotValidAddressException e) {
             System.out.println("Exception caught: " + e.getMessage());
         }
+        System.out.println("Apartament hashCode: " + home1.hashCode());
+
     }
 
     public static void returnByAddress(HashMap<String, Apartament> map, Apartament home) throws NotValidAddressException {
@@ -32,7 +34,6 @@ public class Demo {
         if (!map.containsKey(addressKey)) {
             throw new NotValidAddressException("Not valid address");
         }
-
         Apartament a = map.get(addressKey);
         System.out.println(a);
     }

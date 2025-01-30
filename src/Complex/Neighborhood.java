@@ -6,5 +6,4 @@ public class Neighborhood {
     public Neighborhood(Address adress){
         this.adress=adress;
     }
-
 }
