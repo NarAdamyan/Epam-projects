@@ -20,11 +20,11 @@ public class Points {
             return false;
         }
         Points p = (Points) o;
-        return (p.x == x && p.y == y && Objects.equals(p.color, color) && Objects.equals(p.pointName, pointName));
+        return (p.x == x && p.y == y && Objects.equals(p.color, color));
     }
     @Override
     public int hashCode() {
-        return Objects.hash(x, y, color, pointName);
+        return Objects.hash(x, y, color);
     }
     @Override
     public String toString() {

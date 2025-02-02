@@ -18,8 +18,7 @@ public class DemoPoints {
         hashmap.addToHashMap("ZZZ", e);
 
         System.out.println(hashmap.map);
-        System.out.println(hashmap.valueToKey(hashmap.map));
-
+        System.out.println(hashmap.reversedMap(hashmap.map));
 
         ArrayList<Integer> list = new ArrayList<>();
         list.add(1);

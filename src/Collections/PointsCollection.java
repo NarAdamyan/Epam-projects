@@ -1,4 +1,5 @@
 package Collections;
+
 import java.util.*;
 
 public class PointsCollection {
@@ -11,6 +12,7 @@ public class PointsCollection {
     public void addToHashMap(String name, Points p) {
         map.put(name, p);
     }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Map: {");
@@ -23,22 +25,28 @@ public class PointsCollection {
         sb.append("}");
         return sb.toString();
     }
+
     public void hashToTreeMap() {
         TreeMap<String, Points> tree = new TreeMap<>(this.map);
+        System.out.println(tree);
     }
-    public Map<Points, List<String>> valueToKey(Map<String, Points> map) {
-        Map<Points, List<String>> reverseMap = new HashMap<Points, List<String>>();
-        for (Map.Entry<String, Points> o : map.entrySet()) {
-            String s = o.getKey();
-            Points p = o.getValue();
-            if (Collections.frequency(map.values(), p) == 1) {
-                reverseMap.put(p, Arrays.asList(s));
-            } else if (Collections.frequency(map.values(), p) > 1) {
-                ArrayList<String> values = new ArrayList<>();
-                values.add(s);
-                reverseMap.computeIfAbsent(p, k -> new ArrayList<>()).add(s);
-            }
+
+    public Map<Points, String> reversedMap(Map<String, Points> map) {
+        Map<Points, String> reversedMap;
+        if (map instanceof HashMap) {
+            reversedMap = new HashMap<>();
+        } else if (map instanceof TreeMap) {
+            reversedMap = new TreeMap<>();
+        } else {
+            reversedMap = new HashMap<>();
         }
-        return reverseMap;
+
+        for (Map.Entry<String, Points> entry : map.entrySet()) {
+            String s = entry.getKey();
+            Points p = entry.getValue();
+            reversedMap.put(p, s);
+        }
+        return reversedMap;
     }
 }
+
