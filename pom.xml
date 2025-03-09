@@ -3,12 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <distributionManagement>
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/NarAdamyan/Epam-projects</url>
         </repository>
     </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -20,10 +22,11 @@
     </build>
 
     <scm>
-        <connection>scm:git:git://github.com/NarAdamyan/Epam-projects.git</connection>
-        <developerConnection>scm:git:ssh://github.com/NarAdamyan/Epam-projects.git</developerConnection>
+        <connection>scm:git:https://github.com/NarAdamyan/Epam-projects.git</connection>
+        <developerConnection>scm:git:https://github.com/NarAdamyan/Epam-projects.git</developerConnection>
         <url>https://github.com/NarAdamyan/Epam-projects</url>
     </scm>
+
     <groupId>org.example</groupId>
     <artifactId>FirstMavenProject</artifactId>
     <version>1.0.0</version>
@@ -33,17 +36,12 @@
         <maven.compiler.target>22</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.12.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
